@@ -1,1 +1,271 @@
 @import url("/styles/fonts.css");
+
+:root {
+  --color-main: #9eabb2;
+  --color-h: #4c545c;
+  --color-text-btn: #ffffff;
+  --color-footer-bg: #f5f7f7;
+  --shadow-btn: inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
+
+  --ff-base: "BaiJamjuree", sans-serif;
+}
+
+html,
+body {
+  font-family: var(--ff-base);
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  font-size: 20px;
+  color: var(--color-main);
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-base);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  font-size: 36px;
+  color: var(--color-h);
+  margin: 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+button {
+  font-family: var(--ff-base);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  border-radius: 28px;
+  box-shadow: var(--shadow-btn);
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: var(--color-text-btn);
+  padding: 13px 28px;
+  border: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ios {
+  background-color: #26bba4;
+  transition: all 0.3s ease;
+}
+
+.ios:hover {
+  background-color: #5dccbb;
+}
+
+.mac {
+  background-color: #6174ff;
+  transition: all 0.3s ease;
+}
+
+.mac:hover {
+  background-color: #8897ff;
+}
+
+.item-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 363px;
+  background: url("/images/bg-header-desktop.png") center/cover no-repeat;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 131px;
+}
+
+.hero__title {
+  font-size: 46px;
+  margin-block-start: 56px;
+}
+
+.subtitle {
+  max-width: 730px;
+  text-align: center;
+  margin-block-start: 16px;
+}
+
+.btn-box {
+  display: flex;
+  gap: 16px;
+  margin-block-start: 48px;
+}
+
+.main {
+  margin-top: 150px;
+}
+
+.features {
+  margin-bottom: 150px;
+}
+
+.features__subtitle {
+  margin-bottom: 64px;
+}
+
+.features__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 107px;
+  max-width: 1180px;
+}
+
+.features__media {
+  margin-left: -300px;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.features__item-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.features__item-text {
+  font-size: 16px;
+  max-width: 350px;
+}
+
+.clipboard {
+  margin-bottom: 170px;
+}
+
+.workflow__list {
+  display: flex;
+  gap: 32px;
+  margin-block: 72px 170px;
+}
+
+.workflow__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.workflow__item-title {
+  font-size: 24px;
+  margin-block: 40px 16px;
+}
+
+.workflow__item-text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.workflow__company {
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  margin-bottom: 160px;
+}
+
+.cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 146px;
+}
+
+.footer {
+  background: var(--color-footer-bg);
+  padding: 41px 165px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  gap: 135px;
+}
+
+.footer__list {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  column-gap: 64px;
+  row-gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  color: var(--color-h);
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  line-height: 1.5;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer__item:hover {
+  color: #26bba4;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 0 auto;
+}
+
+/* Варіант через filter, трохи багований ( під час анімації з'являються інші кольори ), але діючий.
+p.s. Підбирав правильно фільрти клод, сам п'ять хвилиг погрався і зрозумів що не зможу довести до ідеала
+p.s.s. Клод докинув фільтр ще елементу, тепер працює без винятків  */
+.footer__social-item img {
+  filter: brightness(0) saturate(100%) invert(74%) sepia(10%) saturate(577%)
+          hue-rotate(149deg) brightness(45%) contrast(98%);
+  transition: filter 0.3s ease;
+}
+
+.footer__social-item:hover img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(50%) saturate(493%)
+    hue-rotate(99deg) brightness(67%) contrast(137%);
+}
