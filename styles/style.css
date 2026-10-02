@@ -1,4 +1,4 @@
-@import url("/styles/fonts.css");
+@import url("./styles/fonts.css");
 
 :root {
   --color-main: #9eabb2;
@@ -100,7 +100,7 @@ section {
   left: 0;
   right: 0;
   height: 363px;
-  background: url("/images/bg-header-desktop.png") center/cover no-repeat;
+  background: url("./images/bg-header-desktop.png") center/cover no-repeat;
   z-index: 0;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
