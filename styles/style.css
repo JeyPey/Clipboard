@@ -176,6 +176,10 @@ section {
   margin-bottom: 170px;
 }
 
+.clipboard img {
+  margin-top: 96px;
+}
+
 .workflow__list {
   display: flex;
   gap: 32px;
